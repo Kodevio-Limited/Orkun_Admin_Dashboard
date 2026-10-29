@@ -1,0 +1,30 @@
+services:
+  admin:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:?Set NEXT_PUBLIC_API_URL to the public backend URL}
+    container_name: aibaby_admin
+    restart: unless-stopped
+    expose:
+      - "3000"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/').then((response) => process.exit(response.ok ? 0 : 1)).catch(() => process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - dokploy-network
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.orkunadmin.rule=Host(`orkunadmin.codebio.com`)
+      - traefik.http.routers.orkunadmin.entrypoints=websecure
+      - traefik.http.routers.orkunadmin.tls.certResolver=letsencrypt
+      - traefik.docker.network=dokploy-network
+      - traefik.http.services.orkunadmin.loadbalancer.server.port=3000
+
+networks:
+  dokploy-network:
+    external: true

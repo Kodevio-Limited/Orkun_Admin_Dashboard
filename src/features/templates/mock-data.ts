@@ -1,0 +1,68 @@
+import { Template } from './types';
+
+export const mockTemplates: Template[] = [
+  {
+    id: '1', name: 'Family Portrait', description: 'Classic family portrait with soft studio lighting',
+    category: 'Portrait', background: '', theme: 'Family', backgroundType: 'Studio',
+    aiPrompt: 'Generate a realistic family portrait using the uploaded faces. Place them naturally in a studio setting with soft lighting. Maintain facial identity. Keep expressions warm and natural.',
+    maintainFaceIdentity: true, keepOriginalGender: true, keepOriginalAge: false, enhanceLighting: true,
+    highQualityRendering: true, allowBackgroundBlur: true, promptWeight: 1.0, negativePrompt: '', seed: null,
+    status: 'active', createdAt: '2026-06-01T10:00:00', updatedAt: '2026-06-15T14:00:00',
+  },
+  {
+    id: '2', name: 'Birthday Celebration', description: 'Fun birthday-themed portrait with party elements',
+    category: 'Event', background: '', theme: 'Birthday', backgroundType: 'Indoor',
+    aiPrompt: 'Create a birthday celebration scene with the uploaded face. Add party hats, balloons, and confetti. Keep facial identity intact. Use warm festive lighting.',
+    maintainFaceIdentity: true, keepOriginalGender: true, keepOriginalAge: true, enhanceLighting: false,
+    highQualityRendering: true, allowBackgroundBlur: false, promptWeight: 0.9, negativePrompt: 'blurry, distorted face', seed: 42,
+    status: 'active', createdAt: '2026-05-20T08:00:00', updatedAt: '2026-06-10T12:00:00',
+  },
+  {
+    id: '3', name: 'Christmas Wonderland', description: 'Holiday-themed portrait with Christmas scenery',
+    category: 'Holiday', background: '', theme: 'Christmas', backgroundType: 'Outdoor',
+    aiPrompt: 'Generate a winter wonderland Christmas scene. Place the person in a snowy landscape with Christmas tree and lights. Maintain facial identity. Use cool blue and warm gold tones.',
+    maintainFaceIdentity: true, keepOriginalGender: true, keepOriginalAge: false, enhanceLighting: true,
+    highQualityRendering: true, allowBackgroundBlur: true, promptWeight: 1.1, negativePrompt: 'distortion, unnatural colors', seed: null,
+    status: 'active', createdAt: '2026-04-15T09:00:00', updatedAt: '2026-05-01T11:00:00',
+  },
+  {
+    id: '4', name: 'Halloween Spooky', description: 'Fun Halloween portrait with spooky background',
+    category: 'Holiday', background: '', theme: 'Halloween', backgroundType: 'Studio',
+    aiPrompt: 'Create a Halloween-themed portrait. Add spooky elements like pumpkins, fog, and cobwebs. Keep facial identity. Use dramatic dark lighting with orange accents.',
+    maintainFaceIdentity: true, keepOriginalGender: true, keepOriginalAge: true, enhanceLighting: false,
+    highQualityRendering: false, allowBackgroundBlur: true, promptWeight: 0.8, negativePrompt: 'gore, blood', seed: 77,
+    status: 'draft', createdAt: '2026-07-01T16:00:00', updatedAt: '2026-07-01T16:00:00',
+  },
+  {
+    id: '5', name: 'Summer Beach Day', description: 'Casual beach portrait with natural sunlight',
+    category: 'Seasonal', background: '', theme: 'Summer', backgroundType: 'Beach',
+    aiPrompt: 'Generate a sunny beach scene portrait. Place the person on a sandy beach with ocean background. Use natural golden hour lighting. Maintain facial identity. Keep expressions relaxed and happy.',
+    maintainFaceIdentity: true, keepOriginalGender: true, keepOriginalAge: false, enhanceLighting: true,
+    highQualityRendering: true, allowBackgroundBlur: true, promptWeight: 1.0, negativePrompt: '', seed: null,
+    status: 'active', createdAt: '2026-03-10T07:00:00', updatedAt: '2026-05-20T10:00:00',
+  },
+  {
+    id: '6', name: 'Graduation Portrait', description: 'Professional graduation photos with cap and gown',
+    category: 'Event', background: '', theme: 'Graduation', backgroundType: 'Outdoor',
+    aiPrompt: 'Create a graduation portrait with cap and gown. Place the person on a university campus with green lawn and buildings. Maintain facial identity. Use bright professional lighting.',
+    maintainFaceIdentity: true, keepOriginalGender: true, keepOriginalAge: true, enhanceLighting: true,
+    highQualityRendering: true, allowBackgroundBlur: true, promptWeight: 1.0, negativePrompt: 'casual clothing', seed: 21,
+    status: 'active', createdAt: '2026-02-20T11:00:00', updatedAt: '2026-04-01T09:00:00',
+  },
+  {
+    id: '7', name: 'Newborn Baby', description: 'Gentle newborn photography setup',
+    category: 'Portrait', background: '', theme: 'Newborn', backgroundType: 'Bedroom',
+    aiPrompt: 'Generate a gentle newborn portrait in a cozy bedroom setting. Use soft diffused lighting. Wrap the baby in soft blankets. Keep the image warm and tender.',
+    maintainFaceIdentity: false, keepOriginalGender: true, keepOriginalAge: true, enhanceLighting: true,
+    highQualityRendering: true, allowBackgroundBlur: true, promptWeight: 0.9, negativePrompt: 'harsh shadows', seed: null,
+    status: 'inactive', createdAt: '2026-01-05T14:00:00', updatedAt: '2026-02-01T10:00:00',
+  },
+  {
+    id: '8', name: 'School Photo Classic', description: 'Traditional school picture day portrait',
+    category: 'Portrait', background: '', theme: 'School', backgroundType: 'Studio',
+    aiPrompt: 'Generate a classic school portrait. Place the person in front of a neutral studio background. Use even front lighting. Maintain facial identity. Keep expression natural and pleasant.',
+    maintainFaceIdentity: true, keepOriginalGender: true, keepOriginalAge: true, enhanceLighting: false,
+    highQualityRendering: true, allowBackgroundBlur: false, promptWeight: 0.8, negativePrompt: '', seed: null,
+    status: 'active', createdAt: '2025-12-01T08:00:00', updatedAt: '2026-01-10T15:00:00',
+  },
+];
